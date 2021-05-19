@@ -1,0 +1,11 @@
+<div>
+   
+    <h3>Type your name</h3>
+    <input type="text" [(ngModel)]="name">
+    <button (click)="alertName();">Press me!</button>
+    <h3>Select your favorite image</h3>
+    <button (click)="changeImage(0);">1</button>
+    <button (click)="changeImage(1);">2</button>
+    <button (click)="changeImage(2);">3</button>
+    <img class="item" [src]="image" alt="">
+</div>
