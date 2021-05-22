@@ -4,11 +4,13 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MiComponenteComponent } from './mi-componente/mi-componente.component';
+import { DigitalClockComponent } from './digital-clock/digital-clock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MiComponenteComponent
+    MiComponenteComponent,
+    DigitalClockComponent
     
   ],
   imports: [
