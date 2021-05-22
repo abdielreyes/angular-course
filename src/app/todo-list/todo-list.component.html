@@ -1,0 +1,50 @@
+<div class="container">
+  <h1 class="title">Todos</h1>
+
+  <div class="columns">
+    <div class="column">
+      <input
+        class="input is-warning"
+        [(ngModel)]="description"
+        placeholder=""
+      />
+    </div>
+    <button class="button is-primary m-3" (click)="createTodo()">
+      Create a todo
+    </button>
+    <div class="column"></div>
+  </div>
+  <nav class="panel">
+    <p class="panel-heading">
+      <span class="panel-icon m-1">
+        <i class="fas fa-book" aria-hidden="true"></i>
+      </span>
+      todo-list
+    </p>
+    <a class="panel-block" *ngFor="let todo of todos">
+      <div class="columns">
+        <div class="column is-3">
+          <input
+            class="input is-primary"
+            type="text"
+            [(ngModel)]="todo.description"
+          />
+        </div>
+        <div class="column is-3">
+          <label class="checkbox">
+            <input type="checkbox" [(ngModel)]="todo.completed" />
+            Completed
+          </label>
+        </div>
+        <div class="column is-4">
+          <code>{{ todo | json }}</code>
+        </div>
+        <div class="column is-2">
+          <button class="button is-danger" (click)="deleteTodo(todo.id)">
+            Delete
+          </button>
+        </div>
+      </div>
+    </a>
+  </nav>
+</div>

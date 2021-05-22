@@ -1,3 +1,21 @@
-<h1>Digital clock</h1>
-
-<span>{{ time | date:'hh:mm:ss a' }}</span>
+<div class="container m-6">
+  <div class="columns">
+    <div class="column is-4"></div>
+    <div class="column is-4 center-text">
+      <h1 class="title">
+        <span class="icon-text">
+          <span>Digital clock</span>
+	  <span class="icon">
+	    <i class="fas fa-clock"></i>
+	  </span>
+        </span>
+      </h1>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-4"></div>
+    <div class="column is-4 center-text">
+      <span class="is-size-2">{{ time | date: "hh:mm:ss a" }}</span>
+    </div>
+  </div>
+</div>
